@@ -15,7 +15,6 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false|
 |name|string|null: false|
 |email|string|null: false|
 |password|string|null: false|
@@ -23,19 +22,18 @@
 ## Association
 - has_many :comments
 - has_many :members
-- has_many :groups
+- has_many :groups, through :members
 
 ## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|group_id|integer|null: false|
 |name|string|null: false|
 
 ## Association
 - has_many :comments
 - has_many :members
-- has_many :users
+  has_many :users, through :members
 
 ## commentsテーブル
 
