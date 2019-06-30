@@ -39,9 +39,11 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|comment|string|foreign_key: true|
-|image|string|foreign_key: true|
+|comment|string|
+|image|string|
 |user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+
 
 ## Association
 - belongs_to :user
