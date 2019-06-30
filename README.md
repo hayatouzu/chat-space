@@ -23,6 +23,7 @@
 ## Association
 - has_many :comments
 - has_many :members
+- has_many :groups
 
 ## groupsテーブル
 
@@ -34,13 +35,14 @@
 ## Association
 - has_many :comments
 - has_many :members
+- has_many :users
 
 ## commentsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|comment|string|null: false, foreign_key: true|
-|image|string|null: false, foreign_key: true|
+|comment|string|foreign_key: true|
+|image|string|foreign_key: true|
 
 ## Association
 - belongs_to :user
