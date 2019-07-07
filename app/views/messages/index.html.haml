@@ -1,0 +1,14 @@
+.chat-side
+  .side_header
+    .side_header_box_user-name
+    %p name
+  .side_header_box_menu
+    %label.upload-label{for: "upload-icon"}
+    %i.fa.fa-picture-o
+    -#= f.file_field :image, id: "upload-icon"
+  .grops
+    .group
+      .group__group-name
+        %p name
+        .group__latest-message
+        
