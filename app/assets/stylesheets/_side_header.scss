@@ -4,7 +4,7 @@
   float: left;
   color: white;}
   .side_header {
-    background-color: blue;
+    background-color: #253141;
     height: 100px;
     width: 300px;
     display: flex;
@@ -18,12 +18,14 @@
         height: calc(100vh - 100px);
         background-color: #2f3e51;
         padding: 20px 20px 0;
-        overflow: scroll;}
+        width: 300px;
+        overflow: scroll;
+      }
       .group{
         font-size: 11px;
       }
     .group__latest-message{
       height: 100px;
       width: 80px;
-      background-color: #243141
+      background-color: #243141;
     }
