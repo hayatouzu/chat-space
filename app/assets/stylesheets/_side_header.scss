@@ -1,24 +1,29 @@
 .chat-side{
-  height: 100%;
   width: 300px;
-  background-color: #253141;
+  
   float: left;
-
-  side_header {
-    background-color: #243141;
+  color: white;}
+  .side_header {
+    background-color: blue;
     height: 100px;
+    width: 300px;
     display: flex;
     align-items: center;
     padding: 0 20px;
-    // side_header_box_user-name {
-    //   display: flex;
-    //   justify-content: space-between;
-    //   width: 100%;
-    //   font-weight: bold;
-    group__latest-message{
+    font-weight: bold;}
+    .side_header_box_user-name {
+      margin: 0;
+      padding: 0;}
+      .grops{
+        height: calc(100vh - 100px);
+        background-color: #2f3e51;
+        padding: 20px 20px 0;
+        overflow: scroll;}
+      .group{
+        font-size: 11px;
+      }
+    .group__latest-message{
       height: 100px;
       width: 80px;
       background-color: #243141
     }
-  }
-}
