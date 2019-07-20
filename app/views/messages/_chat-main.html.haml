@@ -1,0 +1,28 @@
+.chat-main
+  .main-header
+    .current-group
+      .current-group__name
+        %p GUNDAMGROUPS
+        %ul.member-list
+          %p Member
+          %li.member-list__member
+            %p アムロ
+    .main-header__edit-btn
+      %p edit
+  .messages
+    .message
+      .upper-info
+        %p.upper-info__user
+          アムロ
+        %p.upper-info__date
+          2019/07/14(Sun) 17:25:10
+      .message__text
+        %p オレ達がGUNDAMだ！！
+  .new-message 
+  .form
+    %form{class:"new-new-message"}
+      .input-box
+        %input{placeholder:"type a message", type:"text", name:"message[content]", class:"input-box__text"}
+          %label{class:"image-label", for:"message_image"}
+            = fa_icon 'image'
+      %input{type:"submit", name:"commit", value:"Send", class:"new-message__submit-btn"}
