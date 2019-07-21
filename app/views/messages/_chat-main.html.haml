@@ -6,14 +6,14 @@
         %ul.member-list
           %p Member
           %li.member-list__member
-            %p アムロ
+            = current_user.name
     .main-header__edit-btn
       %p edit
   .messages
     .message
       .upper-info
         %p.upper-info__user
-          アムロ
+          = current_user.name
         %p.upper-info__date
           2019/07/14(Sun) 17:25:10
       .message__text

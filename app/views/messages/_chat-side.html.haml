@@ -1,14 +1,19 @@
 .chat-side
   .side_header
     %p.side_header_box_user-name
-      name
+      = current_user.name
       %ul.user_menu
         %li.user-menu__edit-user
-          = fa_icon 'edit'
+          = link_to new_group_path do
+            = fa_icon 'pencil-square-o', class:"icon"
         %li.user-menu__new-groups
-          =fa_icon 'cog'
+          = link_to edit_user_path(current_user) do
+            =fa_icon 'cog'
   .groups
+    - current_user.groups.each do |group|
     .group
-    %p test
-    %p Gundam
-  .group__group-name
+        = link_to group_messages_path(group) do
+          .group__group-name
+            = group.name
+          .group__message
+            メッセージはまだありません。
