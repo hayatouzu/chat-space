@@ -104,17 +104,21 @@
 .image-label{
   font-size: 1.3rem;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: -40px;
+  right: 100px;
 
 }
 
 .input-box__text{
   height: 50px;
-  width: 100%;
+  width: 980px;
   padding: 0 0px 0 10px;
   color: #434a54;
   border-style: none;
+}
+
+.hidden{
+  display: none;
 }
 
 .new-message__submit-btn{
@@ -124,4 +128,7 @@
   margin-left: 15px;
   background-color: #38aef0;
   color: white;
+  position: absolute;
+  right: -38px;
+  top: -50px;
 }
