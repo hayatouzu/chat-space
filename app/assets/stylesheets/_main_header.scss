@@ -76,9 +76,7 @@
   font-size: 14px;
   margin-bottom: 10px;
 }
-.new-message{
-  display: flex;
-}
+
 .input-box{
   position: relative;
   width: 100%;
@@ -91,16 +89,18 @@
   height: 80px;
   padding: 10px 40px;
   background-color:  #ddd;
-  width: 100%;
+  width: calc(100% - 300px);
   box-sizing: border-box;
+  float: right;
 }
-
+.new_message{
+  display: flex;
+}
 .input-box{
   position: relative;
   width: 100%;
   box-sizing: border-box;
 }
-
 .image-label{
   font-size: 1.3rem;
   position: absolute;
@@ -115,6 +115,11 @@
   padding: 0 0px 0 10px;
   color: #434a54;
   border-style: none;
+  box-sizing: border-box;
+}
+
+.hidden{
+  display: none;
 }
 
 .new-message__submit-btn{

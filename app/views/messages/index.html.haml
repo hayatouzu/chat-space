@@ -1,2 +1,12 @@
 = render partial: "messages/chat-side"
 = render partial: "messages/chat-main"
+.messages
+  = render partial: "message", collection: @messages
+.form
+  =form_for [@group, @message] do |f|
+    .input-box
+      = f.text_field :content, class: 'input-box__text', placeholder: 'type a message'
+      = f.label :image, class: 'image-label' do
+        = fa_icon 'picture-o'
+        = f.file_field :image, class: 'hidden'
+    = f.submit 'Send', class: 'new-message__submit-btn'
