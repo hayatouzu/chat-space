@@ -13,6 +13,7 @@ $(function() {
                                 <p class="message__text">
                                     ${ message.content }
                                 </p>
+                                <img class="lower-message" src=${message.image}>
                             </div>
                         </div>`
         return html;
