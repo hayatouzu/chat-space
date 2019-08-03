@@ -1,5 +1,6 @@
 $(function() {
   function buildHTML(message){
+    var image = message.image ? `<img class="lower-message" src=${message.image}>`:``;
     var html = `<div class="message">
                             <div class="upper-info">
                                 <div class="upper-info__user">
@@ -13,14 +14,14 @@ $(function() {
                                 <p class="message__text">
                                     ${ message.content }
                                 </p>
-                                <img class="lower-message" src=${message.image}>
+                                ${image}
                             </div>
                         </div>`
         return html;
     }
-    // function scroll(){
-    //   $('.messages').animate({scrollTop: $('message')[0].scrollHeight});
-    // }
+    function scroll(){
+      $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight});
+    }
   $(".new_message").on("submit",function(e){
     e.preventDefault();
     // var input = $(".input-box__text").val();
@@ -36,12 +37,12 @@ $(function() {
       processData: false,
       contentType: false
     })
-    .done(function(data){
-      var html = buildHTML(data);
+    .done(function(text){
+      var html = buildHTML(text);
       $('.messages').append(html);
       $('.input-box__text').val('');
       $('.form__submit').prop('disabled',false);
-      // scroll()
+      scroll()
     })
     .fail(function(){
       alert('error')
