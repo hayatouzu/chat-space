@@ -4,10 +4,8 @@
       .current-group__name
         = @group.name
         %ul.member-list
-          %p Member :
+          %p Member
           %li.member-list__member
-            - @group.users.each do |user|
-              = user.name
+            = current_user.name
     .main-header__edit-btn
-      = link_to edit_group_path(current_user) do
-        %p edit
+      %p edit
