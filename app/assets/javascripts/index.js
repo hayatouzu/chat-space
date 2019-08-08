@@ -4,7 +4,6 @@ $(document).on('turbolinks:load', function(){
   
   // ユーザーリスト
   function buildHTML(user){
-    console.log(user);
     var html = `<div id="user-seach-result">
                     <div class ="chat-group-user clearfix">
                       <p class ="chat-group-user__name">${user.name}</p>
@@ -61,13 +60,10 @@ $(document).on('turbolinks:load', function(){
   });
   // 追加ボタンクリック時の処理
   $(document).on("click",".user-search-add", function(){
-    console.log(this);
     $('#chat-group-users').val();
     var userId = $(this).data('user-id');
     var userName = $(this).data('user-name');
     addUser(userId,userName);
-    console.log(userId);
-    console.log(userName);
     $(this).parent().remove();
   });
   // 削除ボタンクリック時の処理
