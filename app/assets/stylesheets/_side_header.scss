@@ -16,6 +16,9 @@
       padding: 0;}
     .user_menu{
       display: flex;
+    .icon{
+      color: white;
+    }
     li{
       margin-left: 0.3rem;
     }
@@ -30,6 +33,10 @@
       }
       .group{
         font-size: 11px;
+        
+      }
+      .group__group-name{
+        color: white;
       }
     .group__latest-message{
       height: 100px;
