@@ -56,7 +56,7 @@ $(function() {
   $(function(){
   var group_id = $(".message:last").data("group-id");
   if (location.pathname == `/groups/${group_id}/messages`){
-    setInterval(reloadMessages, 5000);
+    setInterval(reloadMessages, 3000);
   }
   })
   // 自動更新

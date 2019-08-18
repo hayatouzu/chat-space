@@ -1,6 +1,8 @@
 $(document).on('turbolinks:load', function(){
   $(function(){
   
+  var user_search_result =$('#user-search-result')
+  var chat_group_users = $('#chat-group-users')
   
   // ユーザーリスト
   function buildHTML(user){
@@ -23,7 +25,7 @@ $(document).on('turbolinks:load', function(){
   // 追加ユーザーリスト作成
     function addUser(userId,userName) {
     var html = `
-                <div class='chat-group-user-${userId} chat-group-user clearfix' id='chat-group-user-${userId}'>
+                <div class='chat-group-user clearfix js-chat-member' id='chat-group-user-${userId}'>
                   <input name='group[user_ids][]' type='hidden' value='${userId}'>
                   <p class='chat-group-user__name'>${userName}</p>
                   <div class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</div>
@@ -63,6 +65,7 @@ $(document).on('turbolinks:load', function(){
     $('#chat-group-users').val();
     var userId = $(this).data('user-id');
     var userName = $(this).data('user-name');
+    // user_search_result.empty();
     addUser(userId,userName);
     $(this).parent().remove();
   });
