@@ -69,7 +69,7 @@ $(document).on('turbolinks:load', function(){
     addUser(userId,userName);
     $(this).parent().remove();
   });
-  // 削除ボタンクリック時の処理
+  // 削除ボタンクリック時の処理 
   $(document).on('click',".user-search-remove",function(){
     $(this).parent().remove();
   });
