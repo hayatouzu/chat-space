@@ -2,6 +2,10 @@
   width: 300px;
   float: left;
   color: white;}
+  .chat-side a{
+    color: white;
+    text-decoration: none;
+  }
   .side_header {
     background-color: #253141;
     height: 100px;
@@ -12,11 +16,18 @@
     justify-content: space-between;
     width: 300pxpx;}
     .side_header_box_user-name {
+      justify-content: space-between;
+      width: 100%;
       margin: 0;
-      padding: 0;}
+      padding: 0;
+    }
     .user_menu{
       display: flex;
+      float: right;
     .icon{
+      color: white;
+    }
+    .fa-cog{
       color: white;
     }
     li{
@@ -24,7 +35,7 @@
     }
   }
       .groups{
-        height: calc(100vh - 100px);
+        height: calc(100vh - 90px);
         background-color: #2f3e51;
         padding: 20px 20px 0;
         width: 300px;
@@ -33,10 +44,15 @@
       }
       .group{
         font-size: 11px;
-        
+        margin-bottom: 40px;
       }
       .group__group-name{
         color: white;
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
+      .group_message{
+        font-size: 11px;
       }
     .group__latest-message{
       height: 100px;

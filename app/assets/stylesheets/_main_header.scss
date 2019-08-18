@@ -2,6 +2,10 @@
   width: calc(100vw - 300px);
   float: left;
 }
+.chat-main a{
+  text-decoration: none;
+  color: #38aef0;
+}
 .main-header{
   height: 100px;
   padding: 0 40px;
@@ -86,8 +90,8 @@
 }
 
 .form{
-  height: 80px;
-  padding: 10px 40px;
+  height: 90px;
+  padding: 20px 40px;
   background-color:  #ddd;
   width: calc(100% - 300px);
   box-sizing: border-box;
