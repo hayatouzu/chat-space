@@ -23,7 +23,8 @@ $(function() {
     function scroll(){
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight});
     }
-  $(".new_message").on("submit",function(e){
+  $(document).on('turbolinks:load', function(e){
+    $(".new_message").on("submit",function(e){
     e.preventDefault();
     // var input = $(".input-box__text").val();
     // console.log(input);
@@ -37,6 +38,7 @@ $(function() {
       dataType: 'json',
       processData: false,
       contentType: false
+    })
     })
     .done(function(text){
       var html = buildHTML(text);
@@ -53,7 +55,6 @@ $(function() {
     return false;
   });
 
-  $(function(){
   var group_id = $(".message:last").data("group-id");
   if (location.pathname == `/groups/${group_id}/messages`){
     setInterval(reloadMessages, 3000);
@@ -85,4 +86,3 @@ $(function() {
       alert('error');
     });
   };
-});
