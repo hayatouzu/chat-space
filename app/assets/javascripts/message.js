@@ -42,6 +42,7 @@ $(function() {
       var html = buildHTML(text);
       $('.messages').append(html);
       $('.input-box__text').val('');
+      $('.hidden').val('');
       $('.form__submit').prop('disabled',false);
       scroll()
     })
